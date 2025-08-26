@@ -4,7 +4,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import reportRoutes from "./routes/reportRoutes.js";
 import dotenv from 'dotenv';
-const path = require('path');
+
 dotenv.config();
 
 
@@ -16,7 +16,7 @@ app.use(cors({
   methods: ["GET", "POST"]
 }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+
 // Routes
 app.use("/api/report", reportRoutes);
 
